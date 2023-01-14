@@ -9,6 +9,8 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/*Welcome section*/
+
 #welcome-sec {
     background-image: url();
     background-position: center;
@@ -68,3 +70,56 @@ section {
     text-align: center;
     margin: 100px auto;
 }
+
+/*About section*/
+
+#about {
+    background-color: black;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h1 {
+    font-size: 75px;
+    line-height: 80px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.about-text p {
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#about img {
+    max-width: 600px;
+    max-height: 600px;
+}
+
+@media only screen and (max-width: 1100px) {
+    #about {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .about-text h1 {
+        font-size: 40px;
+    }
+
+    .about-text p {
+        margin-top: 20px;
+    }
+
+    #about img {
+        width: 350px;
+    }
+
+}
+
