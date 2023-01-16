@@ -21,7 +21,7 @@ section {
 /*Welcome section*/
 
 #welcome-sec {
-    background-image: url(/images/main.jpg);
+    background-image: url(images/main.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
