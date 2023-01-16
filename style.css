@@ -4,19 +4,28 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: white;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
+    overflow-x: hidden;
+}
+
+section {
+    height: 100%;
 }
 
 /*Welcome section*/
 
 #welcome-sec {
-    background-image: url();
+    background-image: url(/images/main.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 50px 70px;
+    padding: 3.125rem 4.375rem;
 }
 
 header {
@@ -27,48 +36,42 @@ header {
 
 header nav {
     display: flex;
-    gap: 40px;
+    gap: 2.5rem;
 }
 
 header nav a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 800;
+    font-size: 1.125rem;
+    font-weight: 600;
     transition: color 0.3s, text-shadow 0.5s;
 }
 
 header nav a:hover {
     color: black;
-    text-shadow: 2px 2px 30px black;
+    text-shadow: 2px 2px 20px white;
     transition: all 0.5s;
 }
 
 header img {
-    width: 150px;
-}
-
-section {
-    height: 100vh;
-    border: 1px solid red;
+    width: 9.375rem;
 }
 
 .welcome-text {
     width: 90vw;
-    margin: 300px auto;
-    border: 1px solid red;
+    margin: 18.75rem auto;
 }
 
 .welcome-text h1 {
-    font-size: 80px;
+    font-size: 6rem;
     text-align: center;
 }
 
 .welcome-text p {
-    font-size: 24px;
-    max-width: 700px;
+    font-size: 1.5rem;
+    max-width: 43.75rem;
     text-align: center;
-    margin: 100px auto;
+    margin: 6.25rem auto;
 }
 
 /*About section*/
@@ -76,74 +79,81 @@ section {
 #about {
     background-color: black;
     display: flex;
-    gap: 100px;
+    gap: 6.25rem;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 3.125rem;
 }
 
 .about-text {
-    max-width: 600px;
+    max-width: 37.5rem;
 }
 
 .about-text h1 {
-    font-size: 75px;
-    line-height: 80px;
+    font-size: 4.7rem;
+    line-height: 5rem;
     font-weight: 600;
-    text-align: center;
 }
 
 .about-text p {
-    margin-top: 50px;
-    font-family: 'Poppins', sans-serif;
+    margin-top: 3.125rem;
+    font-family: 'Poppins';
+}
+
+.about-text p span {
+    border-bottom: 2px solid crimson;
 }
 
 #about img {
-    max-width: 600px;
-    max-height: 600px;
+    max-width: 37.5rem;
+    max-height: 37.5rem;
 }
 
 /*Battle section*/
 
 #battle {
-    background-image: radial-gradient(rgba(0, 0, 0, 0) 0%, black 60%), url();
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.215) 0%, black 60%), url(images/sec-2.jpg);
     background-position: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .heading {
-    margin-top: 50px;
+    padding-top: 6.25rem;
 }
 
 .heading h5 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .heading h1 {
     text-align: center;
-    font-size: 70px;
+    font-size: 4.375rem;
     font-weight: 500;
 }
 
 .boxes {
-    width: 620px;
-    height: 500px;
-    margin: 60px auto;
+    width: 38.75rem;
+    height: 31.25rem;
     display: flex;
     flex-wrap: wrap;
 }
 
 .box {
-    width: 300px;
-    height: 130px;
+    width: 18.75rem;
+    height: 8.125rem;
     border: 1px solid white;
-    padding: 10px;
+    padding: 0.625rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 0.625rem;
+    font-family: 'Open Sans';
 }
 
 .box h1 {
@@ -151,49 +161,51 @@ section {
 }
 
 .box p {
-    font-size: 12px;
+    font-size: 1rem;
 }
 
 .box:last-child {
-    width: 600px;
+    width: 37.5rem;
 }
 
 /*Opinions section*/
 
 #opinions {
-    background-image: url();
+    background-image: url(images/sec-3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
+    justify-content: space-between;
+    padding: 6.25rem;
 }
 
 .opinions-text {
-    max-width: 450px;
-    font-family: 'Poppins', sans-serif;
+    max-width: 30rem;
+    font-family: 'Poppins';
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
-    background-color: black;
+    padding: 1.25rem;
 }
 
 .opinions-text h1 {
-    font-size: 80px;
+    font-size: 5rem;
 }
 
 .opinions-text p {
-    font-size: 19px;
+    font-size: 1.2rem;
 }
 
 .opinions-text button {
-    padding: 20px;
+    padding: 10px;
     background-color: red;
     font-weight: 600;
     transition: color 0.4s, background-color 0.4s;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 40px;
-    width: 200px;
-    border: none;
-    outline: none;
+    width: 12.5rem;
 }
 
 .opinions-text button:hover {
@@ -203,19 +215,21 @@ section {
 }
 
 .cards {
-    background-color: black;
-    width: 600px;
+    width: 37.5rem;
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 50px;
+    justify-content: center;
+    gap: 4.375rem;
+    margin-right: 3.125rem;
 }
 
 .card {
-    width: 450px;
+    width: 28.125rem;
     border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     padding: 10px;
-    background-color: rgba(47,47,47);
+    background-color: rgb(47, 47, 47);
 }
 
 .card:nth-child(2) {
@@ -224,35 +238,341 @@ section {
 
 .user {
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .user-info {
     color: crimson;
 }
+
+.user-info h1 {
+    font-size: 1.5rem;
+}
+
 .gray {
     color: gray;
 }
 
 @media only screen and (max-width: 1100px) {
+
+    #welcome-sec {
+        padding: 1.5rem 2rem;
+    }
+
+    .welcome-text {
+        margin: 6rem auto;
+    }
+    
+    .welcome-text p {
+        margin: 2rem auto;
+    }
+
     #about {
         flex-direction: column;
-        gap: 50px;
+        gap: 3.125rem;
     }
     
     .about-text h1 {
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
     .about-text p {
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
 
     #about img {
-        width: 350px;
+        width: 22rem;
     }
 
+    #opinions {
+        flex-direction: column;
+    }
+    
+    .opinions-text {
+        margin: 0 auto;
+    }
+    
+    .cards {
+        gap: 20px;
+        margin: 0 auto;
+    }    
 }
 
+@media only screen and (max-width:750px) {
+    .cards {
+        align-items: center;
+        gap: 30px;
+    }
+
+    .card:nth-child(2) {
+        align-self: center;
+    }
+    
+}
+
+@media only screen and (max-width:670px) {
+
+    header {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .boxes {
+        flex-direction: column;
+        height: 45rem;
+        
+    }
+
+    .box {
+        width: 37.5rem;
+    }
+
+    .cards {
+        align-items: flex-start;
+    }
+
+    .card:nth-child(2) {
+        align-self: flex-start;
+    }
+    
+}
+
+@media only screen and (max-width:630px) {
+
+    .heading h1 {
+        font-size: 3.375rem;
+    }
+
+    .boxes {
+        align-items: center;
+        
+    }
+
+    .box {
+        width: 30rem;
+    }
+
+    .box:last-child {
+        width: 30rem;
+    }
+
+    #opinions {
+        padding: 4rem;
+    }
+    
+}
+
+@media only screen and (max-width:550px) {
+    #opinions {
+        padding: 2rem;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .box {
+        width: 25rem;
+    }
+
+    .box:last-child {
+        width: 25rem;
+    }
+
+    #opinions {
+        padding: 1rem;
+    }
+
+    .cards {
+        margin: 1.5rem;
+    }    
+
+    .card {
+        width: 25rem;
+        
+    }
+}
+
+@media only screen and (max-width:450px) {
+
+    #opinions {
+        padding: 0.5rem;
+    }
+
+    .opinions-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .cards {
+        margin: 3rem;
+    }    
+
+    .card {
+        width: 20rem;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    header nav {
+        gap: 1.5rem;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+    }
+
+    .welcome-text h1 {
+        font-size: 5rem;
+    }
+    
+    .welcome-text p {
+        font-size: 1.4rem;
+        margin: 0 auto;
+    }
+
+    #about img {
+        max-width: 20.5rem;
+        max-height: 20.5rem;
+    }
+
+    .heading h1 {
+        font-size: 2.6rem;
+    }
+
+    .boxes {
+        height: 50rem;
+    }
+
+    .box {
+        width: 20rem;
+    }
+
+    .box:last-child {
+        width: 20rem;
+        height: 12rem;
+    }
+
+    #opinions {
+        padding: 0.1rem;
+    }
+
+    .opinions-text h1 {
+        font-size: 3rem;
+    }
+
+    .cards {
+        margin: 2rem;
+    }    
+
+    .card {
+        width: 17rem;
+    }
+}
+
+@media only screen and (max-width:350px) {
+
+    .welcome-text {
+        width: 80vw;
+        margin: 0;
+    }
+
+    .welcome-text h1 {
+        font-size: 4rem;
+    }
+    
+    .welcome-text p {
+        font-size: 1.2rem;
+        margin: 0 auto;
+    }
+
+    #about img {
+        max-width: 15.5rem;
+        max-height: 15.5rem;
+    }
+
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .boxes {
+        height: 70rem;
+    }
+    
+    .box {
+        width: 15rem;
+        height: 13rem;
+    }
+
+    .box:last-child {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .opinions-text h1 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        margin: 1rem;
+    }    
+
+    .card {
+        width: 17rem;
+    }
+}
+
+@media only screen and (max-width:300px) {
+
+    header nav {
+        gap: 1.2rem;
+    }
+
+    header nav a {
+        font-size: 0.6rem;
+    }
+
+    .welcome-text {
+        width: 80vw;
+        margin: 0.5rem auto;
+    }
+
+    .welcome-text h1 {
+        font-size: 3rem;
+    }
+    
+    .welcome-text p {
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .about-text h1 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        margin-top: 1rem;
+    }
+
+    #about img {
+        max-width: 12.5rem;
+        max-height: 12.5rem;
+    }   
+
+    #opinions {
+        padding: 0;
+    }
+
+    .card {
+        width: 15rem;
+    }
+}
+
+@media only screen and (max-width:260px) {
+    .card {
+        width: 14rem;
+    }
+
+    .user-info h1 {
+        font-size: 1.2rem;
+    }
+}
